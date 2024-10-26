@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #6A8EAA, #F76B6A, #E1C6A9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.round{
+  border-radius: 8px;
+}
+
+@keyframes colorChange {
+  0% { color: rgb(196, 94, 31); }
+  50% { color: rgb(112, 112, 112); }
+  100% { color: rgb(229, 167, 12); }
+}
+
+.hover\:animate-colorChange:hover {
+  animation: colorChange 2s infinite;
+}
