@@ -5,16 +5,18 @@ import Hero from './Components/Hero';
 import BookCard from './Components/BookCard';
 import ViewBook from './Components/ViewBook';
 import ViewAuthor from './Components/ViewAuthor';
+import Login from './Components/LoginForm'; // Import the Login component
 
 function App() {
   return (
     <Router>
-      <Header />
       <Routes>
         <Route path="/view-book/:id" element={<ViewBook />} />
-        <Route path="/view-author/:id" element={<ViewAuthor />} />
-        <Route path="/" element={
+        <Route path="/view-author/:authorId" element={<ViewAuthor />} />
+        <Route path="/" element={<Login />} /> {/* Set Login as the default route */}
+        <Route path="/home" element={
           <>
+            <Header />
             <Hero />
             <BookCard />
           </>
@@ -23,6 +25,5 @@ function App() {
     </Router>
   );
 }
-
 
 export default App;

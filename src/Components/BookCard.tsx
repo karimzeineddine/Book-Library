@@ -8,7 +8,7 @@ function BookCard() {
   return (
     <div className='grid grid-cols-5 p-20 justify-items-center gap-5'>
       {searchBook.docs && searchBook.docs.length > 0 ? (
-        searchBook.docs.map((book: any) => ( // Change 'string' to 'any' for proper typing
+        searchBook.docs.map((book: any) => (
           //@ts-ignore
           <Link to={`/view-book/${book.key.split('/')[2]}`} key={book.key} className='hover:border hover:shadow-lg hover:px-7 hover:py-3 rounded'>
             <div className='flex flex-col items-center'>
@@ -34,8 +34,10 @@ function BookCard() {
           </Link>
         ))
       ) : (
-        <div className='flex justify-center items-center w-full'>
-          <h1 className='text-4xl'>Search for a book inside the search bar</h1>
+        <div className='col-span-5 flex justify-center items-center w-full h-full bg-gray-100 p-5 rounded-md shadow-md'>
+          <h1 className='text-4xl text-center text-gray-600 font-semibold'>
+            Search for a book in the search bar
+          </h1>
         </div>
       )}
     </div>

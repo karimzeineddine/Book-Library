@@ -1,12 +1,12 @@
-// Update Zustand store to include trending books data
 import { create } from "zustand";
-export const useStore = create((set, get) => ({
+
+export const useStore = create((set) => ({
   searchValue: '',
-  setSearchValue: (newSearchvalue : string) => set(() => ({ searchValue: newSearchvalue })),
+  setSearchValue: (newSearchValue:string) => set(() => ({ searchValue: newSearchValue })),
 
   searchBook: '',
-  setBookValue: (newBookvalue :string) => set(() => ({ searchBook: newBookvalue })),
+  setBookValue: (newBookValue:string) => set(() => ({ searchBook: newBookValue })),
   
-  trendingBooks: [],
-  setTrendingBooks: (books : string) => set(() => ({ trendingBooks: books })),
+  trendingBooks: [], // Ensure it's initialized as an array
+  setTrendingBooks: (books:string) => set(() => ({ trendingBooks: books })),
 }));

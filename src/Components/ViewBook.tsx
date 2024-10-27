@@ -26,11 +26,12 @@ function ViewBook() {
             )}
           </div>
           <div className='flex flex-col gap-3 max-w-[500px]'>
-            <Link to={`/view-author/${book.author}`}> {/* Ensure book.author is the correct identifier */}
+            <Link to={`/view-author/${book.author_key}`}> {/* Ensure book.author_key is the correct identifier */}
               <h1 className='text-3xl font-bold hover:animate-colorChange cursor-pointer'>
                 {book.author_name ? book.author_name.join(', ') : 'Unknown Author'}
               </h1>
             </Link>
+
             <h2 className='font-bold text-xl'>{book.title}</h2>
             <p>{book.first_sentence || 'No description available.'}</p>
           </div>
