@@ -43,8 +43,7 @@ function Header() {
   return (
     <div className='flex justify-between px-5 py-3 h-14 items-center'>
       <div className='flex gap-3 items-center'>
-        <img src="" alt="LOGO" />
-        <h1 className='text-gradient text-xl font-bold'>PageturbO</h1>
+        <img src="/logo.jpg" alt="LOGO" className='w-[120px]' />
       </div>
       <div className='flex flex-1 max-w-xl'>
         <input 
@@ -60,11 +59,10 @@ function Header() {
           Search
         </button>
       </div>
-      <div className='flex gap-3'>
-        <a href="">Link 1</a>
-        <a href="">Link 2</a>
-        <a href="">Link 3</a>
-        <img src="" alt="BOOK"/>
+      <div className='flex gap-5 pr-10'>
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
       </div>
     </div>
   );
